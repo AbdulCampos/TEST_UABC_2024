@@ -30,7 +30,7 @@ module tt_um_example (
             counter <24'd0;
             display_value <= display_value + 1'b1;
 
-            if(display_value == 4'd15) begin
+            if(display_value == 4'd9) begin
                 display_value <= 4'd0;
             end
         end else begin
@@ -44,7 +44,7 @@ module tt_um_example (
     assign uio_oe = 0;
 
     //List all unused inputs to prevents warnings
-    wire_unsued =&{ena,ui_in,uio_in};
+    wire_unsued = &{ena,ui_in,uio_in};
 
   // All output pins must be assigned. If not used, assign to 0.
  // assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
