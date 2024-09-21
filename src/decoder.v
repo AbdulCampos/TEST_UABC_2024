@@ -1,8 +1,8 @@
 module seg7(
   input wire [3:0] digit,
-  output reg [6:0]
+  output reg [6:0] segments
 
-always @(LETRA) begin
+  always @(*) begin
         case(LETRA)
           
             4'd0: segments = 7'b1110111; //A
